@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,6 +13,6 @@ namespace WebServicves.WCF
     public interface IJokeService
     {
         [OperationContract]
-        void DoWork();
+        List<Joke> GetAllJokes();
     }
 }

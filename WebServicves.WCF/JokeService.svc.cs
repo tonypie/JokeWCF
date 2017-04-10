@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -11,8 +12,16 @@ namespace WebServicves.WCF
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class JokeService : IJokeService
     {
-        public void DoWork()
+        private JokesDatabase jd;
+        public JokeService()
         {
+            jd= new JokesDatabase();
+        }
+        public List<Joke> GetAllJokes()
+        {
+            List<Joke> jokeList = jd.GetAllJokes();
+
+            return jokeList;
         }
     }
 }
