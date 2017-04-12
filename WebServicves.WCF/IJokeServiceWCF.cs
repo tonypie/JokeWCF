@@ -10,9 +10,21 @@ namespace WebServicves.WCF
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
-    public interface IJokeService
+    public interface IJokeServiceWCF
     {
         [OperationContract]
+        Joke GetJoke(int jokeID);
+
+        [OperationContract]
         List<Joke> GetAllJokes();
+
+        [OperationContract]
+        int AddJoke(Joke joke);
+
+        [OperationContract]
+        void UpdateJoke(Joke joke);
+
+        [OperationContract]
+        void DeleteJoke(int jokeID);
     }
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="99371108-2c52-4c2a-8002-586bc5388160" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62644/JokeServiceWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JokeServiceWCF.xsd" MetadataType="Schema" ID="556f68fe-73cc-473f-94c3-b1247bfbb1ae" SourceId="1" SourceUrl="http://localhost:62644/JokeServiceWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="JokeServiceWCF.wsdl" MetadataType="Wsdl" ID="8529d45a-ea16-4b34-b585-25411c7467dc" SourceId="1" SourceUrl="http://localhost:62644/JokeServiceWCF.svc?wsdl" />
+    <MetadataFile FileName="JokeServiceWCF.disco" MetadataType="Disco" ID="24a19c79-2fda-454c-91d3-656bb09eba0e" SourceId="1" SourceUrl="http://localhost:62644/JokeServiceWCF.svc?disco" />
+    <MetadataFile FileName="JokeServiceWCF1.xsd" MetadataType="Schema" ID="78828831-5337-461e-9dc6-df02525ea827" SourceId="1" SourceUrl="http://localhost:62644/JokeServiceWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="JokeServiceWCF2.xsd" MetadataType="Schema" ID="57371858-31f1-43bc-a735-33136a89c633" SourceId="1" SourceUrl="http://localhost:62644/JokeServiceWCF.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
