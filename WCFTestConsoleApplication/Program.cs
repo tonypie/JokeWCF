@@ -30,7 +30,7 @@ namespace WCFTestConsoleApplication
             Console.WriteLine("L) List All Jokes");
             Console.WriteLine("#) Show Joke by ID");
             Console.WriteLine("N) Enter a New Joke");
-            Console.WriteLine("Q) Quite");
+            Console.WriteLine("Q) Quit");
             Console.WriteLine("Please enter a command");
         }
 
