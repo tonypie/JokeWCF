@@ -13,6 +13,7 @@ namespace WebServicves.WCF
     public class JokeServiceWCF : IJokeServiceWCF
     {
         private JokesDatabase jd;
+
         public JokeServiceWCF()
         {
             jd = new JokesDatabase();
@@ -30,19 +31,19 @@ namespace WebServicves.WCF
             return jokeList;
         }
 
-        public int AddJoke(Joke joke)
+        public Joke AddJoke(Joke joke)
         {
-            throw new NotImplementedException();
+            return jd.AddJoke(joke);
         }
 
-        public void UpdateJoke(Joke joke)
+        public Joke UpdateJoke(Joke joke)
         {
-            throw new NotImplementedException();
+            return jd.UpdateJoke(joke);
         }
 
         public void DeleteJoke(int jokeID)
         {
-            throw new NotImplementedException();
+            jd.DeleteJoke(jokeID);
         }
     }
 }

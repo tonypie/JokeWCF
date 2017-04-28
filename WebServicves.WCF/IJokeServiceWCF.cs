@@ -19,10 +19,10 @@ namespace WebServicves.WCF
         List<Joke> GetAllJokes();
 
         [OperationContract]
-        int AddJoke(Joke joke);
+        Joke AddJoke(Joke joke);
 
         [OperationContract]
-        void UpdateJoke(Joke joke);
+        Joke UpdateJoke(Joke joke);
 
         [OperationContract]
         void DeleteJoke(int jokeID);

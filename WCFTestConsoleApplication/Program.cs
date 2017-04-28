@@ -1,5 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using System.Xml.Serialization;
 using WCFTestConsoleApplication.DataServices;
 using WCFTestConsoleApplication.JokeServiceWCF;
 
@@ -45,10 +50,15 @@ namespace WCFTestConsoleApplication
 
                     foreach (Joke j in l)
                     {
-                            Console.WriteLine($"ID: {j.jokeId}");
-                            Console.WriteLine($"Title: {j.title}");
-                            Console.WriteLine($"Joke: {j.jokeText}");
+                        Console.WriteLine($"ID: {j.JokeId}");
+                        Console.WriteLine($"Title: {j.Title}");
+                        Console.WriteLine($"Joke: {j.JokeText}");
                     }
+                    break;
+                }
+                case 'N':
+                {
+					
                     break;
                 }
             }

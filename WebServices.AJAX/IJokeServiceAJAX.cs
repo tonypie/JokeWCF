@@ -1,29 +1,39 @@
 ﻿using Data;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
+using System.ServiceModel.Activation;
+using System.ServiceModel.Web;
 
 namespace WebServices.AJAX
 {
-    [ServiceContract]
+    [ServiceContract(Namespace = "")]
     public interface IJokeServiceAJAX
     {
         [OperationContract]
-        Joke GetJoke(int jokeID);
+        [WebGet]
+        void DoWork();
 
         [OperationContract]
+        [WebGet]
         List<Joke> GetAllJokes();
 
         [OperationContract]
-        int AddJoke(Joke joke);
+        [WebGet]
+        Joke GetJoke(int jokeID);
+
 
         [OperationContract]
-        void UpdateJoke(Joke joke);
+        [WebInvoke]
+        Joke AddJoke(Joke joke);
+
 
         [OperationContract]
+        [WebInvoke]
+        Joke UpdateJoke(Joke joke);
+
+
+        [OperationContract]
+        [WebInvoke]
         void DeleteJoke(int jokeID);
     }
 }

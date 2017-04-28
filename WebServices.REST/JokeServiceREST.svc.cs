@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -6,22 +7,18 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Text;
-using Data;
 
-namespace WebServices.AJAX
+namespace WebServices.REST
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class JokeServiceAJAX : IJokeServiceAJAX
+    public class JokeServiceREST : IJokeServiceREST
     {
         private JokesDatabase jd;
 
-        public JokeServiceAJAX()
+        public JokeServiceREST()
         {
             jd = new JokesDatabase();
         }
-
-        public void DoWork()
-        { return; }
 
         // To use HTTP GET, add [WebGet] attribute. (Default ResponseFormat is WebMessageFormat.Json)
         // To create an operation that returns XML,
@@ -35,9 +32,11 @@ namespace WebServices.AJAX
             return jd.GetAllJokes();
         }
 
-        public Joke GetJoke(int jokeID)
+        public Joke GetJoke(string jokeID)
         {
-            return jd.GetJoke(jokeID);
+            int parsedJokeId;
+            parsedJokeId = Int32.Parse(jokeID);
+            return jd.GetJoke(parsedJokeId);
         }
 
         public Joke AddJoke(Joke joke)
@@ -45,15 +44,18 @@ namespace WebServices.AJAX
             return jd.AddJoke(joke);
         }
 
-        public Joke UpdateJoke(Joke joke)
+        public void UpdateJoke(Joke joke)
         {
-            return jd.UpdateJoke(joke);
+            jd.UpdateJoke(joke);
         }
 
-        public void DeleteJoke(int jokeID)
+        public void DeleteJoke(string jokeID)
         {
-            jd.DeleteJoke(jokeID);
+            int parsedJokeId;
+            parsedJokeId = Int32.Parse(jokeID);
+            jd.DeleteJoke(parsedJokeId);
         }
         // Add more operations here and mark them with [OperationContract]
     }
 }
+

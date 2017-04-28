@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:62644/JokeServiceWCF.svc?xsd=xsd2" namespace="test" />
+  <xs:import schemaLocation="http://localhost:62644/JokeServiceWCF.svc?xsd=xsd2" />
   <xs:element name="GetJoke">
     <xs:complexType>
       <xs:sequence>
@@ -11,7 +11,7 @@
   <xs:element name="GetJokeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="test" minOccurs="0" name="GetJokeResult" nillable="true" type="q1:Joke" />
+        <xs:element minOccurs="0" name="GetJokeResult" nillable="true" type="Joke" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -23,28 +23,28 @@
   <xs:element name="GetAllJokesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="test" minOccurs="0" name="GetAllJokesResult" nillable="true" type="q2:ArrayOfJoke" />
+        <xs:element minOccurs="0" name="GetAllJokesResult" nillable="true" type="ArrayOfJoke" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddJoke">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="test" minOccurs="0" name="joke" nillable="true" type="q3:Joke" />
+        <xs:element minOccurs="0" name="joke" nillable="true" type="Joke" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddJokeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AddJokeResult" type="xs:int" />
+        <xs:element minOccurs="0" name="AddJokeResult" nillable="true" type="Joke" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateJoke">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="test" minOccurs="0" name="joke" nillable="true" type="q4:Joke" />
+        <xs:element minOccurs="0" name="joke" nillable="true" type="Joke" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

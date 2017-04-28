@@ -15,7 +15,7 @@ namespace WCFTestConsoleApplication.JokeServiceWCF {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Joke", Namespace="test")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Joke", Namespace="")]
     [System.SerializableAttribute()]
     public partial class Joke : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -23,13 +23,13 @@ namespace WCFTestConsoleApplication.JokeServiceWCF {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int jokeIdField;
+        private int JokeIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string jokeTextField;
+        private string JokeTextField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string titleField;
+        private string TitleField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -42,40 +42,40 @@ namespace WCFTestConsoleApplication.JokeServiceWCF {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int jokeId {
+        public int JokeId {
             get {
-                return this.jokeIdField;
+                return this.JokeIdField;
             }
             set {
-                if ((this.jokeIdField.Equals(value) != true)) {
-                    this.jokeIdField = value;
-                    this.RaisePropertyChanged("jokeId");
+                if ((this.JokeIdField.Equals(value) != true)) {
+                    this.JokeIdField = value;
+                    this.RaisePropertyChanged("JokeId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string jokeText {
+        public string JokeText {
             get {
-                return this.jokeTextField;
+                return this.JokeTextField;
             }
             set {
-                if ((object.ReferenceEquals(this.jokeTextField, value) != true)) {
-                    this.jokeTextField = value;
-                    this.RaisePropertyChanged("jokeText");
+                if ((object.ReferenceEquals(this.JokeTextField, value) != true)) {
+                    this.JokeTextField = value;
+                    this.RaisePropertyChanged("JokeText");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string title {
+        public string Title {
             get {
-                return this.titleField;
+                return this.TitleField;
             }
             set {
-                if ((object.ReferenceEquals(this.titleField, value) != true)) {
-                    this.titleField = value;
-                    this.RaisePropertyChanged("title");
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
                 }
             }
         }
@@ -107,10 +107,10 @@ namespace WCFTestConsoleApplication.JokeServiceWCF {
         System.Threading.Tasks.Task<System.Collections.Generic.List<WCFTestConsoleApplication.JokeServiceWCF.Joke>> GetAllJokesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJokeServiceWCF/AddJoke", ReplyAction="http://tempuri.org/IJokeServiceWCF/AddJokeResponse")]
-        int AddJoke(WCFTestConsoleApplication.JokeServiceWCF.Joke joke);
+        WCFTestConsoleApplication.JokeServiceWCF.Joke AddJoke(WCFTestConsoleApplication.JokeServiceWCF.Joke joke);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJokeServiceWCF/AddJoke", ReplyAction="http://tempuri.org/IJokeServiceWCF/AddJokeResponse")]
-        System.Threading.Tasks.Task<int> AddJokeAsync(WCFTestConsoleApplication.JokeServiceWCF.Joke joke);
+        System.Threading.Tasks.Task<WCFTestConsoleApplication.JokeServiceWCF.Joke> AddJokeAsync(WCFTestConsoleApplication.JokeServiceWCF.Joke joke);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJokeServiceWCF/UpdateJoke", ReplyAction="http://tempuri.org/IJokeServiceWCF/UpdateJokeResponse")]
         void UpdateJoke(WCFTestConsoleApplication.JokeServiceWCF.Joke joke);
@@ -168,11 +168,11 @@ namespace WCFTestConsoleApplication.JokeServiceWCF {
             return base.Channel.GetAllJokesAsync();
         }
         
-        public int AddJoke(WCFTestConsoleApplication.JokeServiceWCF.Joke joke) {
+        public WCFTestConsoleApplication.JokeServiceWCF.Joke AddJoke(WCFTestConsoleApplication.JokeServiceWCF.Joke joke) {
             return base.Channel.AddJoke(joke);
         }
         
-        public System.Threading.Tasks.Task<int> AddJokeAsync(WCFTestConsoleApplication.JokeServiceWCF.Joke joke) {
+        public System.Threading.Tasks.Task<WCFTestConsoleApplication.JokeServiceWCF.Joke> AddJokeAsync(WCFTestConsoleApplication.JokeServiceWCF.Joke joke) {
             return base.Channel.AddJokeAsync(joke);
         }
         
