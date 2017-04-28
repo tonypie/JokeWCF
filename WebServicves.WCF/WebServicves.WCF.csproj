@@ -113,7 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="JokeService.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IJokeService.cs" />
