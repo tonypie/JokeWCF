@@ -1,9 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServicves.WCF", "WebServicves.WCF\WebServicves.WCF.csproj", "{DA7FB6A8-F0AF-4E0F-A336-6EAA029BD720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFTestConsoleApplication", "WCFTestConsoleApplication\WCFTestConsoleApplication.csproj", "{A825B6DF-45F0-4312-8000-BC2875FAA03E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DA7FB6A8-F0AF-4E0F-A336-6EAA029BD720} = {DA7FB6A8-F0AF-4E0F-A336-6EAA029BD720}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.AJAX", "WebServices.AJAX\WebServices.AJAX.csproj", "{0ACAFE7E-1E4A-4ABC-8774-84321FA07CA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAjaxWebService", "TestAjaxWebService\TestAjaxWebService.csproj", "{B1CCB231-41A0-4A37-BB48-C41879F628D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.REST", "WebServices.REST\WebServices.REST.csproj", "{9316F046-D67D-4D25-9E25-AD92D0F2C306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTTestConsoleApp", "RESTTestConsoleApp\RESTTestConsoleApp.csproj", "{3253CD75-E3CE-4B88-B650-76CFE17ECD0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +28,26 @@ Global
 		{DA7FB6A8-F0AF-4E0F-A336-6EAA029BD720}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA7FB6A8-F0AF-4E0F-A336-6EAA029BD720}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA7FB6A8-F0AF-4E0F-A336-6EAA029BD720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A825B6DF-45F0-4312-8000-BC2875FAA03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A825B6DF-45F0-4312-8000-BC2875FAA03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A825B6DF-45F0-4312-8000-BC2875FAA03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A825B6DF-45F0-4312-8000-BC2875FAA03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ACAFE7E-1E4A-4ABC-8774-84321FA07CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ACAFE7E-1E4A-4ABC-8774-84321FA07CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ACAFE7E-1E4A-4ABC-8774-84321FA07CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ACAFE7E-1E4A-4ABC-8774-84321FA07CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1CCB231-41A0-4A37-BB48-C41879F628D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1CCB231-41A0-4A37-BB48-C41879F628D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1CCB231-41A0-4A37-BB48-C41879F628D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1CCB231-41A0-4A37-BB48-C41879F628D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9316F046-D67D-4D25-9E25-AD92D0F2C306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9316F046-D67D-4D25-9E25-AD92D0F2C306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9316F046-D67D-4D25-9E25-AD92D0F2C306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9316F046-D67D-4D25-9E25-AD92D0F2C306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3253CD75-E3CE-4B88-B650-76CFE17ECD0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3253CD75-E3CE-4B88-B650-76CFE17ECD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3253CD75-E3CE-4B88-B650-76CFE17ECD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3253CD75-E3CE-4B88-B650-76CFE17ECD0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
